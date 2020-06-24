@@ -8,7 +8,8 @@ const connectDB = async () => {
         .connect("mongodb+srv://michaela123:michaela123@contactkepper-90plv.mongodb.net/ContactKepper?retryWrites=true&w=majority", {
             useNewUrlParser: true,
             useCreateIndex: true,
-            useFindAndModify: false
+            useFindAndModify: false,
+            useUnifiedTopology: true
         });
         console.log('MongoDB Connected')
     } catch (err) {
