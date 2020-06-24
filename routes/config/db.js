@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const config = require('config');
-const db = config.get('mongoURI'); 
+// const config = require('config');
+// const db = config.get('mongoURI'); 
 
 const connectDB = async () => {
     try {
         await mongoose
-        .connect(db, {
+        .connect("mongodb+srv://michaela123:michaela123@contactkepper-90plv.mongodb.net/ContactKepper?retryWrites=true&w=majority", {
             useNewUrlParser: true,
             useCreateIndex: true,
             useFindAndModify: false
